@@ -20,7 +20,6 @@ public class MainActivity extends Activity {
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String URL = "https://pokeapi.co/api/v2/";
     private static final int DETAIL_REQUEST_CODE = 3306;
-    // private String[] names = {"John Doe", "Joe Sixpack"};
     private ListView listView;
     private Intent intent;
     private JSONArray jsonArray = new JSONArray();
@@ -74,14 +73,7 @@ public class MainActivity extends Activity {
     private void fillList(){
 
         listView = findViewById(R.id.listview);
-        /*listView.setOnScrollListener(new EndlessScrollListener() {
-            @Override
-            public boolean onLoadMore(int page, int totalItemsCount) {
-                getData(page);
-                listView.deferNotifyDataSetChanged();
-                return true;
-            }
-        });*/
+
         ListAdapter adapter = new ListAdapter(){
 
             @Override
